@@ -1,0 +1,53 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mainSwiper {
+  width: 100%;
+  aspect-ratio: 480 / 320;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--color-light-gray);
+}
+
+.mainSlide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.mainImage {
+  object-fit: cover;
+}
+
+.thumbsSwiper {
+  width: 100%;
+}
+
+.thumbSlide {
+  position: relative;
+  width: 100px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.thumbSlide:global(.swiper-slide-thumb-active) {
+  opacity: 1;
+  outline: 2px solid var(--color-green);
+}
+
+.thumbImage {
+  object-fit: cover;
+}
+
+.placeholder {
+  width: 100%;
+  aspect-ratio: 480 / 320;
+  border-radius: 10px;
+  background-color: var(--color-light-gray);
+}
