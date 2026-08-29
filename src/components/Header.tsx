@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import styles from './Header.module.css';
 
@@ -13,7 +14,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.inner}>
         <Link href="/" className={styles.logo}>
-          Travel<span>Trucks</span>
+          <Image src="/images/logo.svg" alt="TravelTrucks" width={177} height={21} priority />
         </Link>
         <nav className={styles.nav}>
           <Link
@@ -31,5 +32,5 @@ export default function Header() {
         </nav>
       </div>
     </header>
-  )
+  );
 }

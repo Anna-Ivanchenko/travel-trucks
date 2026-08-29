@@ -14,14 +14,9 @@
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--color-dark);
+  display: flex;
+  align-items: center;
   text-decoration: none;
-}
-
-.logo span {
-  color: var(--color-green);
 }
 
 .nav {
@@ -47,6 +42,6 @@
 }
 
 .active {
-  color: var(--color-green);
+  color: var(--color-gray-light);
   font-weight: 500;
 }
