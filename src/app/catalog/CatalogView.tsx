@@ -2,11 +2,11 @@
 
 import { useState } from 'react';
 import { useInfiniteQuery } from '@tanstack/react-query';
+import Image from 'next/image';
 import { getCampers } from '@/lib/api';
 import type { CamperFilters, CampersResponse } from '@/lib/types';
 import Filters from './Filters';
 import CamperCard from './CamperCard';
-import NoResultsIllustration from './NoResultsIllustration';
 import styles from './Catalog.module.css';
 
 const PER_PAGE = 4;
@@ -52,7 +52,13 @@ export default function CatalogView() {
 
         {!isLoading && !isError && campers.length === 0 && (
           <div className={styles.empty}>
-            <NoResultsIllustration />
+            <Image
+              src="/images/no-results.svg"
+              alt=""
+              width={180}
+              height={170}
+              className={styles.emptyImage}
+            />
             <h2>No campers found</h2>
             <p>
               We couldn&rsquo;t find any campers that match your filters. Try adjusting your

@@ -97,6 +97,10 @@
   margin-top: 8px;
 }
 
+.emptyImage {
+  object-fit: contain;
+}
+
 .loadMoreWrap {
   display: flex;
   justify-content: center;
