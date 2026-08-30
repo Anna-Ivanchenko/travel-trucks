@@ -1,23 +1,18 @@
-/*
-  Design tokens sourced directly from the Figma file (Inspect → Code).
-  Variable names match the ones used in the design ("--main", "--text",
-  "--grey-green", etc.) so the code and the design stay traceable 1:1.
-*/
+
 :root {
   /* Colors */
-  --main: #101828; /* headings, primary text, active nav */
-  --text: #475467; /* body/secondary text */
-  --white: #fff;
-  --inputs: #f7f7f7; /* card & panel backgrounds, input fill */
-  --badges: #f2f4f7; /* tag/badge backgrounds */
-  --gray: #6c717b; /* muted labels, meta text */
-  --gray-light: #dadde1; /* borders, dividers */
-  --button: #e44848; /* danger / validation states */
+  --main: #101828; 
+  --text: #475467; 
+  --inputs: #f7f7f7; 
+  --badges: #f2f4f7; 
+  --gray: #6c717b; 
+  --gray-light: #dadde1; 
+  --button: #e44848; 
   --button-hover: #d84343;
-  --rating: #ffc531; /* star rating */
-  --grey-green: #829b91; /* primary buttons, links, accents */
-  --olive: #f0f1f1; /* subtle alt background */
-  --green-hover: #6d7b75; /* primary button hover/focus */
+  --rating: #ffc531;
+  --grey-green: #829b91; 
+  --olive: #f0f1f1; 
+  --green-hover: #6d7b75;
 
   /* Typography */
   --font-family: 'Inter', sans-serif;
