@@ -12,7 +12,6 @@ interface FormErrors {
 }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-// Letters (incl. Cyrillic), spaces, hyphens and apostrophes only — no digits/symbols.
 const NAME_RE = /^[A-Za-zА-Яа-яЇїІіЄєҐґ'’-]+(\s[A-Za-zА-Яа-яЇїІіЄєҐґ'’-]+)*$/;
 
 
@@ -23,8 +22,8 @@ export default function BookingForm({ camperId }: { camperId: string }) {
 
   const mutation = useMutation({
     mutationFn: bookCamper,
-    onSuccess: () => {
-      toast.success('Booking successful! We will contact you shortly.');
+    onSuccess: (data) => {
+      toast.success(data?.message || 'Booking successful! We will contact you shortly.');
       setName('');
       setEmail('');
       setErrors({});

@@ -62,14 +62,17 @@ export async function getCamperReviews(camperId: string): Promise<Review[]> {
   return res.json();
 }
 
-export async function bookCamper(payload: BookingPayload): Promise<void> {
-  const res = await fetch(`${API_BASE_URL}/campers/${payload.camperId}/booking`, {
+export async function bookCamper(payload: BookingPayload): Promise<{ message: string }> {
+  const { camperId, ...body } = payload;
+  const res = await fetch(`${API_BASE_URL}/campers/${camperId}/booking-requests`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload),
+    body: JSON.stringify(body),
   });
 
   if (!res.ok) {
     throw new Error(`Booking failed: ${res.status}`);
   }
+
+  return res.json();
 }
