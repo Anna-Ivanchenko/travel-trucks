@@ -77,8 +77,8 @@ export default function CatalogView() {
 
         {campers.length > 0 && (
           <ul className={styles.list}>
-            {campers.map((camper) => (
-              <CamperCard key={camper.id} camper={camper} />
+            {campers.map((camper, index) => (
+              <CamperCard key={camper.id} camper={camper} priority={index < 2} />
             ))}
           </ul>
         )}

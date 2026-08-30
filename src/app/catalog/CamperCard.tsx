@@ -6,7 +6,7 @@ import { TbHomeStar } from 'react-icons/tb';
 import type { Camper } from '@/lib/types';
 import styles from './CamperCard.module.css';
 
-export default function CamperCard({ camper }: { camper: Camper }) {
+export default function CamperCard({ camper, priority = false }: { camper: Camper; priority?: boolean }) {
   const image = camper.coverImage;
   const reviewsCount = camper.totalReviews ?? camper.reviews?.length ?? 0;
 
@@ -14,7 +14,14 @@ export default function CamperCard({ camper }: { camper: Camper }) {
     <li className={styles.card}>
       <div className={styles.imageWrap}>
         {image ? (
-          <Image src={image} alt={camper.name} fill sizes="292px" className={styles.image} />
+          <Image
+            src={image}
+            alt={camper.name}
+            fill
+            sizes="292px"
+            className={styles.image}
+            priority={priority}
+          />
         ) : (
           <div className={styles.imagePlaceholder} />
         )}
