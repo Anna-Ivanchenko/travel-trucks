@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  min-width: 0;
 }
 
 .right {
@@ -19,23 +20,26 @@
 }
 
 .summary {
-  background-color: var(--color-light-gray);
+  background-color: var(--inputs);
   border-radius: 16px;
   padding: 24px;
 }
 
 .name {
+  font-family: var(--font-family);
   font-size: 28px;
   font-weight: 700;
+  color: var(--main);
   margin-bottom: 8px;
 }
 
 .meta {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
   font-size: 14px;
-  color: var(--color-gray);
+  color: var(--text);
   margin-bottom: 16px;
 }
 
@@ -46,7 +50,7 @@
 }
 
 .star {
-  color: var(--color-yellow);
+  color: var(--rating);
 }
 
 .location {
@@ -57,26 +61,30 @@
 }
 
 .price {
+  font-family: var(--font-family);
   font-size: 24px;
   font-weight: 700;
+  color: var(--main);
   margin-bottom: 16px;
 }
 
 .description {
   font-size: 15px;
-  color: var(--color-gray);
+  color: var(--text);
   line-height: 1.6;
 }
 
 .detailsCard {
-  background-color: var(--color-light-gray);
+  background-color: var(--inputs);
   border-radius: 16px;
   padding: 24px;
 }
 
 .sectionTitle {
+  font-family: var(--font-family);
   font-size: 20px;
   font-weight: 600;
+  color: var(--main);
   margin-bottom: 16px;
 }
 
@@ -89,9 +97,11 @@
 }
 
 .featureTag {
-  padding: 8px 14px;
+  padding: 12px 18px;
   border-radius: 100px;
-  background-color: var(--color-white);
+  background-color: var(--badges);
+  mix-blend-mode: multiply;
+  color: var(--main);
   font-size: 13px;
   text-transform: capitalize;
 }
@@ -105,7 +115,7 @@
   display: flex;
   justify-content: space-between;
   padding: 12px 0;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--gray-light);
   font-size: 14px;
 }
 
@@ -114,11 +124,12 @@
 }
 
 .specRow dt {
-  color: var(--color-gray);
+  color: var(--text);
 }
 
 .specRow dd {
   font-weight: 600;
+  color: var(--main);
 }
 
 .section {
@@ -126,8 +137,29 @@
   flex-direction: column;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1023px) {
   .page {
     grid-template-columns: 1fr;
+    padding-top: 24px;
+    padding-bottom: 56px;
+  }
+
+  .left {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .name {
+    font-size: 22px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .summary,
+  .detailsCard {
+    padding: 16px;
   }
 }

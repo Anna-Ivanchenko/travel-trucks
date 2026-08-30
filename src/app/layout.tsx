@@ -1,6 +1,19 @@
 import type { Metadata } from 'next';
+import { Inter, Manrope } from 'next/font/google';
 import Providers from '@/components/Providers';
 import './globals.css';
+
+const inter = Inter({
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-family',
+  display: 'swap',
+});
+
+const manrope = Manrope({
+  subsets: ['latin', 'cyrillic'],
+  variable: '--second-family',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://travel-trucks.example.com'),
@@ -29,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
       <body>
         <Providers>{children}</Providers>
       </body>

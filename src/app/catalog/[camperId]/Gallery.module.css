@@ -9,7 +9,7 @@
   aspect-ratio: 480 / 320;
   border-radius: 10px;
   overflow: hidden;
-  background-color: var(--color-light-gray);
+  background-color: var(--inputs);
 }
 
 .mainSlide {
@@ -38,7 +38,7 @@
 
 .thumbSlide:global(.swiper-slide-thumb-active) {
   opacity: 1;
-  outline: 2px solid var(--color-green);
+  outline: 2px solid var(--grey-green);
 }
 
 .thumbImage {
@@ -49,5 +49,12 @@
   width: 100%;
   aspect-ratio: 480 / 320;
   border-radius: 10px;
-  background-color: var(--color-light-gray);
+  background-color: var(--inputs);
+}
+
+@media (max-width: 767px) {
+  .thumbSlide {
+    width: 72px;
+    height: 60px;
+  }
 }

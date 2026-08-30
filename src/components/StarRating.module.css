@@ -4,10 +4,10 @@
 }
 
 .filled {
-  color: var(--color-yellow);
-  fill: var(--color-yellow);
+  color: var(--rating);
+  fill: var(--rating);
 }
 
 .empty {
-  color: var(--color-border);
+  color: var(--gray-light);
 }

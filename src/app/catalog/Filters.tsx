@@ -30,7 +30,7 @@ const TRANSMISSION_OPTIONS: { value: Transmission; label: string }[] = [
   { value: 'manual', label: 'Manual' },
 ];
 
-export default function Filters({ initialFilters, onSearch, onClear }: FiltersProps) {
+export default function Filters({ initialFilters, onSearch, onClear }: FilterProps) {
   const [location, setLocation] = useState(initialFilters.location ?? '');
   const [form, setForm] = useState<CamperForm | undefined>(initialFilters.form);
   const [engine, setEngine] = useState<Engine | undefined>(initialFilters.engine);

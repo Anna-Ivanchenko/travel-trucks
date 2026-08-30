@@ -1,5 +1,5 @@
 export type CamperForm =
-  | 'aclove'
+  | 'alcove'
   | 'panel_van'
   | 'integrated'
   | 'semi_integrated';
