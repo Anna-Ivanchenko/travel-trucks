@@ -1,12 +1,13 @@
+/* Mobile-first: base styles = smallest screens (320px+) */
+
 .filters {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  width: 312px;
-  flex-shrink: 0;
+  gap: 24px;
+  width: 100%;
   background-color: var(--inputs);
-  border-radius: 16px;
-  padding: 24px;
+  border-radius: 20px;
+  padding: 16px;
 }
 
 .field {
@@ -48,11 +49,11 @@
 
 .heading {
   font-family: var(--font-family);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--main);
   border-bottom: 1px solid var(--gray-light);
-  padding-bottom: 20px;
+  padding-bottom: 16px;
 }
 
 .group {
@@ -61,7 +62,7 @@
   flex-direction: column;
   gap: 12px;
   border-bottom: 1px solid var(--gray-light);
-  padding-bottom: 20px;
+  padding-bottom: 16px;
 }
 
 .groupLabel {
@@ -83,30 +84,33 @@
 
 .searchBtn {
   width: 100%;
-  padding: 16px 60px;
 }
 
 .clearBtn {
   width: 100%;
 }
 
-@media (max-width: 1023px) {
+/* Tablet devices */
+@media only screen and (min-width: 768px) {
   .filters {
-    width: 100%;
-  }
-}
-
-@media (max-width: 767px) {
-  .filters {
-    gap: 24px;
-    padding: 16px;
+    gap: 32px;
+    padding: 24px;
   }
 
   .heading {
-    padding-bottom: 16px;
+    padding-bottom: 20px;
   }
 
   .group {
-    padding-bottom: 16px;
+    padding-bottom: 20px;
+  }
+}
+
+/* Desktop devices */
+@media only screen and (min-width: 1440px) {
+  .filters {
+    width: 360px;
+    flex-shrink: 0;
+    gap: 48px;
   }
 }

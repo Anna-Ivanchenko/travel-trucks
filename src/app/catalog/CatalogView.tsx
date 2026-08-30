@@ -55,8 +55,8 @@ export default function CatalogView() {
             <Image
               src="/images/no-results.svg"
               alt=""
-              width={180}
-              height={170}
+              width={488}
+              height={463}
               className={styles.emptyImage}
             />
             <h2>No campers found</h2>
@@ -86,7 +86,7 @@ export default function CatalogView() {
         {hasNextPage && (
           <div className={styles.loadMoreWrap}>
             <button
-              className="btn btnOutline"
+              className={`btn btnOutline ${styles.loadMoreBtn}`}
               onClick={() => fetchNextPage()}
               disabled={isFetchingNextPage}
             >

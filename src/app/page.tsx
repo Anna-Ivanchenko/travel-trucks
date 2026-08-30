@@ -9,10 +9,12 @@ export default function HomePage() {
       <main>
         <section className={styles.hero}>
           <div className={styles.heroContent}>
-            <h1 className={styles.title}>Campers of your dreams</h1>
-            <p className={styles.subtitle}>
-              You can find everything you want in our catalog
-            </p>
+            <div className={styles.heroText}>
+              <h1 className={styles.title}>Campers of your dreams</h1>
+              <p className={styles.subtitle}>
+                You can find everything you want in our catalog
+              </p>
+            </div>
             <Link href="/catalog" className={`btn ${styles.cta}`}>
               View Now
             </Link>

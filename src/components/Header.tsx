@@ -14,7 +14,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.inner}>
         <Link href="/" className={styles.logo}>
-          <Image src="/images/logo.svg" alt="TravelTrucks" width={177} height={21} priority />
+          <Image src="/images/logo.svg" alt="TravelTrucks" width={136} height={16} priority />
         </Link>
         <nav className={styles.nav}>
           <Link

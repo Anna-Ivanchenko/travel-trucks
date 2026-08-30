@@ -1,12 +1,14 @@
+/* Mobile-first: base styles = smallest screens (320px+) */
+
 .card {
   background-color: var(--inputs);
   border-radius: 16px;
-  padding: 24px;
+  padding: 16px;
 }
 
 .title {
   font-family: var(--font-family);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--main);
   margin-bottom: 8px;
@@ -15,7 +17,7 @@
 .subtitle {
   font-size: 14px;
   color: var(--text);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .form {
@@ -40,6 +42,7 @@
   background-color: var(--white);
   color: var(--main);
   resize: vertical;
+  width: 100%;
 }
 
 .field input:focus,
@@ -56,8 +59,17 @@
   color: var(--button);
 }
 
-@media (max-width: 767px) {
+/* Tablet devices */
+@media only screen and (min-width: 768px) {
   .card {
-    padding: 16px;
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    margin-bottom: 24px;
   }
 }

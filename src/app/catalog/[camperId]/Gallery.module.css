@@ -1,3 +1,5 @@
+/* Mobile-first: base styles = smallest screens (320px+) */
+
 .gallery {
   display: flex;
   flex-direction: column;
@@ -28,8 +30,8 @@
 
 .thumbSlide {
   position: relative;
-  width: 100px;
-  height: 80px;
+  width: 72px;
+  height: 60px;
   border-radius: 8px;
   overflow: hidden;
   opacity: 0.6;
@@ -52,9 +54,10 @@
   background-color: var(--inputs);
 }
 
-@media (max-width: 767px) {
+/* Tablet devices */
+@media only screen and (min-width: 768px) {
   .thumbSlide {
-    width: 72px;
-    height: 60px;
+    width: 100px;
+    height: 80px;
   }
 }

@@ -1,21 +1,23 @@
+/* Mobile-first: base styles = smallest screens (320px+) */
+
 .list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   list-style: none;
 }
 
 .item {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   background-color: var(--inputs);
   border-radius: 16px;
-  padding: 20px;
+  padding: 16px;
 }
 
 .avatar {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
   border-radius: 50%;
   background-color: var(--gray-light);
@@ -48,9 +50,19 @@
   color: var(--text);
 }
 
-@media (max-width: 767px) {
+/* Tablet devices */
+@media only screen and (min-width: 768px) {
+  .list {
+    gap: 16px;
+  }
+
   .item {
-    padding: 16px;
-    gap: 12px;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .avatar {
+    width: 44px;
+    height: 44px;
   }
 }

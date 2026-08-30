@@ -1,28 +1,32 @@
-
+/*
+  Design tokens sourced directly from the Figma file (Inspect → Code).
+  Variable names match the ones used in the design ("--main", "--text",
+  "--grey-green", etc.) so the code and the design stay traceable 1:1.
+*/
 :root {
   /* Colors */
-  --main: #101828; 
-  --text: #475467; 
+  --main: #101828; /* headings, primary text, active nav */
+  --text: #475467; /* body/secondary text */
   --white: #fff;
-  --inputs: #f7f7f7; 
-  --badges: #f2f4f7; 
-  --gray: #6c717b; 
-  --gray-light: #dadde1; 
-  --button: #e44848; 
+  --inputs: #f7f7f7; /* card & panel backgrounds, input fill */
+  --badges: #f2f4f7; /* tag/badge backgrounds */
+  --gray: #6c717b; /* muted labels, meta text */
+  --gray-light: #dadde1; /* borders, dividers */
+  --button: #e44848; /* danger / validation states */
   --button-hover: #d84343;
-  --rating: #ffc531; 
-  --grey-green: #829b91;
-  --olive: #f0f1f1; 
-  --green-hover: #6d7b75; 
+  --rating: #ffc531; /* star rating */
+  --grey-green: #829b91; /* primary buttons, links, accents */
+  --olive: #f0f1f1; /* subtle alt background */
+  --green-hover: #6d7b75; /* primary button hover/focus */
 
   /* Typography */
   --font-family: 'Inter', sans-serif;
   --second-family: 'Manrope', sans-serif;
 
-  /* Layout */
-  --container-padding-desktop: 100px;
-  --container-padding-tablet: 32px;
+  /* Layout — mobile-first breakpoints: 375 / 768 / 1440 */
   --container-padding-mobile: 16px;
+  --container-padding-tablet: 32px;
+  --container-padding-desktop: 64px;
 }
 
 * {
@@ -63,32 +67,36 @@ img {
   display: block;
 }
 
+/* Styles for Mobile devices (fluid, 320px+) */
 .container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 var(--container-padding-desktop);
+  width: 100%;
+  max-width: 100%;
+  padding: 0 var(--container-padding-mobile);
 }
 
-@media (max-width: 1279px) {
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
   .container {
     padding: 0 var(--container-padding-tablet);
   }
 }
 
-@media (max-width: 767px) {
+/* Desktop devices */
+@media only screen and (min-width: 1440px) {
   .container {
-    padding: 0 var(--container-padding-mobile);
+    padding: 0 var(--container-padding-desktop);
   }
 }
 
 .btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  width: 100%;
   border: none;
   border-radius: 200px;
-  padding: 16px 60px;
+  padding: 14px 32px;
   font-family: var(--font-family);
   font-size: 16px;
   font-weight: 500;
@@ -98,6 +106,13 @@ img {
   color: var(--white);
   transition: background-color 0.2s ease, opacity 0.2s ease;
   white-space: nowrap;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn {
+    width: auto;
+    padding: 16px 60px;
+  }
 }
 
 .btn:hover:not(:disabled),
@@ -119,11 +134,4 @@ img {
 .btnOutline:hover:not(:disabled),
 .btnOutline:focus-visible:not(:disabled) {
   background-color: var(--inputs);
-}
-
-@media (max-width: 767px) {
-  .btn {
-    padding: 14px 32px;
-    width: 100%;
-  }
 }
